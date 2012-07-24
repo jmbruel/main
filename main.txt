@@ -75,6 +75,55 @@ second line <1><2>
 <1> first callout
 <2> second callout
 
+=== Incremental images block
+
+You can define incremental images blocks as follows :
+
+----
+images::last[first,second,...]
+----
+
+NOTE: You can use +data-uri+ attribute to embed incremental images.
+
+[WARNING]
+====
+It's a 'slidy2' *only* macro, so you have to use it
+in a conditionnal block. For exemple :
+
+----
+ ifdef::backend-slidy2[]
+  images::last[first,second,...]
+ endif::backend-slidy2[]
+
+ ifndef::backend-slidy2[]
+  image::last[]
+ endif::backend-slidy2[]
+----
+====
+
+ifdef::backend-slidy2[<<<]
+
+The following statement :
+
+----
+images::./images/osmfmoma4.png[./images/osmfmoma1.png,./images/osmfmoma2.png,./images/osmfmoma3.png]
+----
+
+ifdef::backend-slidy2[]
+renders :
+
+images::./images/osmfmoma4.png[./images/osmfmoma1.png,./images/osmfmoma2.png,./images/osmfmoma3.png]
+endif::backend-slidy2[]
+
+ifndef::backend-slidy2[]
+renders incremently in 'Slidy' output :
+
+image::./images/osmfmoma4.png[scaledwidth="90%"]
+endif::backend-slidy2[]
+
+:incremental!:
+
+
 == Tips and tricks
 
 [TIP]
