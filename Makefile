@@ -4,7 +4,7 @@ init:
 
 html:
 	@echo '==> Compiling asciidoc files to generate HTML'
-	asciidoc -a icons -a iconsdir=./images/icons main.txt
+	asciidoc -a posix --unsafe make.txt
 
 compact:
 	@echo '==> Compiling asciidoc files to generate compact HTML'
@@ -12,8 +12,8 @@ compact:
 
 slidy:
 	@echo '==> Compiling asciidoc files to generate HTML'
-	asciidoc --backend slidy2 -a icons -a iconsdir=./images/icons -a stylesheet=~/.asciidoc/backends/slidy2/doc/keycap.css -a data-uri -a slide -o main.slidy.html main.txt
-	
+	asciidoc -a posix --unsafe make.txt
+		
 checkout: 
 	@echo '==> Checkout de la dernière version'
 	git checkout master

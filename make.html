@@ -734,110 +734,29 @@ asciidoc.install();
 <h1>make.txt : an AsciiDoc poor man Makefile</h1>
 </div>
 <div id="content">
-<div class="sect1">
+<div class="sect1 /Users/bruel/.asciidoc/backends/slidy2/doc/keycap.css">
 <h2 id="_backends_plugins_list">backends plugins list</h2>
 <div class="sectionbody">
 <div class="paragraph"><p><div class="listingblock"><div class="content">
-<tt>/opt/local/bin/asciidoc/asciidoc.py --backend list</tt><tt style="color: green;"> </tt> <br />
-<pre style="color: red;">sh: /opt/local/bin/asciidoc/asciidoc.py: Not a directory</pre>
+<tt>/opt/local/bin/asciidoc.py --backend list</tt><tt style="color: green;"> </tt> <br />
+<pre style="color: red;">/Users/bruel/.asciidoc/backends/slidy2</pre>
 </div></div></p></div>
 </div>
 </div>
-<div class="sect1">
+<div class="sect1 /Users/bruel/.asciidoc/backends/slidy2/doc/keycap.css">
 <h2 id="_local_outputs">local outputs</h2>
 <div class="sectionbody">
 <div class="paragraph"><p><div class="listingblock"><div class="content">
-<tt>/opt/local/bin/asciidoc/asciidoc.py --backend slidy2 -a numbered -a icons -a badges   -a iconsdir=../images/icons -a stylesheet=doc/keycap.css -a revnumber=1.0 -a data-uri -a slide</tt><tt style="color: green;">  -o main.slidy.html main.txt</tt> <br />
-<pre style="color: red;">sh: /opt/local/bin/asciidoc/asciidoc.py: Not a directory</pre> &#8594; <a href="main.slidy.html">main.slidy.html</a> compiled from <a href="main.txt">main.txt</a>
+<tt>/opt/local/bin/asciidoc.py --backend slidy2 -a numbered -a icons -a badges   -a iconsdir=./images/icons  -a stylesheet=/Users/bruel/.asciidoc/backends/slidy2/doc/keycap.css -a revnumber=1.0 -a data-uri -a slide</tt><tt style="color: green;">  -o main.slidy.html main.txt</tt> <br />
+<pre style="color: red;"></pre> &#8594; <a href="main.slidy.html">main.slidy.html</a> compiled from <a href="main.txt">main.txt</a>
 </div></div></p></div>
 <div class="paragraph"><p></p></div>
 <div class="paragraph"><p></p></div>
 <div class="paragraph"><p></p></div>
+<div class="paragraph"><p></p></div>
 <div class="paragraph"><p><div class="listingblock"><div class="content">
-<tt>a2x -v -f pdf -L --fop --icons-dir=../images/icons -a revnumber=1.0</tt><tt style="color: green;"> main.txt</tt> <br />
-<pre style="color: red;">a2x: args: ['-v', '-f', 'pdf', '-L', '--fop', '--icons-dir=../images/icons', '-a', 'revnumber=1.0', 'main.txt']
-a2x: resource files: []
-a2x: resource directories: ['/opt/local/etc/asciidoc/images', '/opt/local/etc/asciidoc/stylesheets']
-a2x: executing: "/opt/local/bin/asciidoc" --backend docbook -a "a2x-format=pdf"  --attribute "revnumber=1.0" --verbose  --out-file "/Users/bruel/dev/template/main.xml" "/Users/bruel/dev/template/main.txt"
-
-asciidoc: reading: /opt/local/etc/asciidoc/asciidoc.conf
-asciidoc: reading: /Users/bruel/dev/template/main.txt
-asciidoc: reading: /opt/local/etc/asciidoc/docbook45.conf
-asciidoc: reading: /opt/local/etc/asciidoc/filters/code/code-filter.conf
-asciidoc: reading: /opt/local/etc/asciidoc/filters/graphviz/graphviz-filter.conf
-asciidoc: reading: /opt/local/etc/asciidoc/filters/latex/latex-filter.conf
-asciidoc: reading: /opt/local/etc/asciidoc/filters/music/music-filter.conf
-asciidoc: reading: /opt/local/etc/asciidoc/filters/source/source-highlight-filter.conf
-asciidoc: reading: /opt/local/etc/asciidoc/lang-en.conf
-asciidoc: writing: /Users/bruel/dev/template/main.xml
-
-a2x: chdir /Users/bruel/dev/template
-a2x: executing: "xsltproc"  --stringparam callout.graphics 1 --stringparam navig.graphics 1 --stringparam admon.textlabel 0 --stringparam admon.graphics 1 --stringparam admon.graphics.path "../images/icons/" --stringparam callout.graphics.path "../images/icons/callouts/" --stringparam navig.graphics.path "../images/icons/"  --output "/Users/bruel/dev/template/main.fo" "/opt/local/etc/asciidoc/docbook-xsl/fo.xsl" "/Users/bruel/dev/template/main.xml"
-
-Making portrait pages on A4 paper (210mmx297mm)
-
-a2x: chdir /Users/bruel/dev/template
-a2x: executing: "fop"   -fo "/Users/bruel/dev/template/main.fo" -pdf "/Users/bruel/dev/template/main.pdf"
-
-24 juil. 2012 19:22:03 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/note.png. (See position 9:792)
-24 juil. 2012 19:22:03 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/warning.png. (See position 29:608)
-24 juil. 2012 19:22:03 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/note.png. (See position 85:543)
-24 juil. 2012 19:22:03 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/important.png. (See position 89:1264)
-24 juil. 2012 19:22:05 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Font "Symbol,normal,700" not found. Substituting with "Symbol,normal,400".
-24 juil. 2012 19:22:05 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Font "ZapfDingbats,normal,700" not found. Substituting with "ZapfDingbats,normal,400".
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Glyph "?" (0x2192, arrowright) not available in font "Times-Roman".
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Line 1 of a paragraph overflows the available area by more than 50 points. (See position 19:169)
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Line 1 of a paragraph overflows the available area by more than 50 points. (See position 59:169)
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Line 1 of a paragraph overflows the available area by more than 50 points. (See position 59:411)
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Line 1 of a paragraph overflows the available area by more than 50 points. (See position 61:169)
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Line 1 of a paragraph overflows the available area by 20919 millipoints. (See position 69:169)
-24 juil. 2012 19:22:06 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 2 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:08 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/note.png. (No context info available)
-24 juil. 2012 19:22:08 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 3 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:11 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/warning.png. (No context info available)
-24 juil. 2012 19:22:11 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 4 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:11 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 5 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:13 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 6 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:18 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 7 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:21 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 8 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:24 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 9 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:29 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 10 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:31 org.apache.fop.events.LoggingEventListener processEvent
-ATTENTION: Content overflows the viewport of the fo:region-before on page 11 in block-progression direction by 250 millipoints. (See position 2:17787)
-24 juil. 2012 19:22:31 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/note.png. (No context info available)
-24 juil. 2012 19:22:31 org.apache.fop.events.LoggingEventListener processEvent
-GRAVE: Image not found. URI: ../images/icons/important.png. (No context info available)
-
-a2x: deleting /Users/bruel/dev/template/main.fo
-a2x: deleting /Users/bruel/dev/template/main.xml</pre>
-</div></div></p></div>
-<div class="paragraph"><p><div class="listingblock"><div class="content">
-<tt>/opt/local/bin/asciidoc/asciidoc.py  -a stylesdir=/opt/local/bin/asciidoc/stylesheets -a scriptsdir=/opt/local/bin/asciidoc/javascripts -a numbered -a icons  -a iconsdir=../images/icons -a badges -a toc -a revnumber=1.0 -a data-uri -a info1</tt><tt style="color: green;">  -o main.html main.txt</tt> <br />
-<pre style="color: red;">sh: /opt/local/bin/asciidoc/asciidoc.py: Not a directory</pre> &#8594; <a href="main.html">main.html</a> compiled from <a href="main.txt">main.txt</a>
+<tt>/opt/local/bin/asciidoc.py  -a stylesdir=/opt/local/etc/asciidoc/stylesheets  -a scriptsdir=/opt/local/etc/asciidoc/javascripts -a numbered -a icons  -a iconsdir=./images/icons  -a stylesheet=/Users/bruel/.asciidoc/backends/slidy2/doc/keycap.css -a badges -a toc -a revnumber=1.0 -a data-uri -a info1</tt><tt style="color: green;">  -o main.html main.txt</tt> <br />
+<pre style="color: red;"></pre> &#8594; <a href="main.html">main.html</a> compiled from <a href="main.txt">main.txt</a>
 </div></div></p></div>
 </div>
 </div>
@@ -845,7 +764,7 @@ a2x: deleting /Users/bruel/dev/template/main.xml</pre>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-07-24 19:21:46 CEST
+Last updated 2012-07-25 00:00:40 CEST
 </div>
 </div>
 </body>
