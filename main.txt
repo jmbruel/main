@@ -1,0 +1,109 @@
+= Title with some 'keyword' highlighted
+:title: Title with some keyword highlighted
+:description: Template
+:keywords: one two
+:Author: Jean-Michel Bruel 
+:Author Initials: JMI
+:Email: jean-michel.bruel@univ-tlse2.fr
+:Revision: 1.0
+:Date: {localdate}
+:images: images
+:toc_title: Content
+:slideshowlocation: [IUT Blagnac]
+:duration: 7
+:slidebackground: asciidocslidy
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by Asciidoc and W3C Slidy &#169; 
+:incremental!:
+
+// raccourcis sites
+:moodle: http://webetud.iut-blagnac.fr[Moodle]
+:asciidoc: http://www.methods.co.nz/asciidoc[AsciiDoc]
+:slidy2: http://www.w3.org/Talks/Tools/Slidy2/[W3C HTML Slidy]
+
+// data
+:jmi: Jean-Michel Inglebert
+:jmimail: jean-michel.inglebert@univ-tlse2.fr
+
+== Some section
+
+=== Some subsection
+
+Blabla
+
+* list1
+** list11
+** list 12
+* list2
+
+// For breakpage :
+// ifdef::backend-slidy2[<<<]
+
+// For nobreakpage :
+// ifdef::backend-slidy2[>>>]
+
+=== Some other subsection
+
+image:{images}/image.png["Full",height="300",link="{images}/image.png"]
+
+[NOTE]
+====
+- this is a 'note'
+- blabla
+====
+
+[quote, Bertrand Russell, The World of Mathematics (1956)]
+____________________________________________________________________
+A good notation has subtlety and suggestiveness which at times makes
+it almost seem like a live teacher.
+____________________________________________________________________
+
+
+[verse, William Blake, from Auguries of Innocence]
+__________________________________________________
+To see a world in a grain of sand,
+And a heaven in a wild flower,
+Hold infinity in the palm of your hand,
+And eternity in an hour.
+__________________________________________________
+
+.source code
+----
+first line  <1>
+second line <1><2>
+----
+
+<1> first callout
+<2> second callout
+
+== Tips and tricks
+
+[TIP]
+====
+*tip1*:: definition of 'tip1'
+*tip2*:: definition
+====
+
+ifdef::backend-slidy2[<<<]
+
+[IMPORTANT]
+====
+This is 'important'
+====
+
+== Links
+
+- provide some sites http://goo.gl/GVhhX[here].
+- For more about the http://jmb.c.la[author]
+
+== About...
+
+**********************************************************************
+Document generated with {asciidoc} (v. 8.6.8) from 'Stuart Rackham' by mailto:{email}[{author}].
+
+Using {slidy2} (C) from 'Dave Raggett', an HTML slideshow tool, improved by mailto:{jmimail}[{jmi}].
+
+image:http://i.creativecommons.org/l/by-sa/3.0/88x31.png["Licence Creative Commons",style="border-width:0",link="http://creativecommons.org/licenses/by-sa/3.0/"]
+http://creativecommons.org/licenses/by-sa/3.0/[licence Creative Commons Paternité - Partage à l&#39;Identique 3.0 non transposé].
+**********************************************************************
+
+

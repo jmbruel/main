@@ -1,0 +1,159 @@
+body {
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       /* pour pouvoir centrer les figures*/
+       min-width:100%;
+       min-height:100%;
+       margin:0%;
+       margin-top:0%;
+       /*----*/
+       font-size: x-small;
+       /*background-color: rgb(250, 250, 240);*/ /* beige */
+       /*background-color: rgb(255, 255, 225);*/  /* gris clair bleuté*/
+       }
+
+
+h2, h3, h4, h5, h6, ul, li, ol{
+                                text-align:left;
+                                }
+
+h2, h3, h4, h5, h6 {
+                     margin-left:2%;
+                     border-bottom:solid;
+                     border-bottom-width:1pt;
+                     color: rgb(30, 50, 195);
+                     }
+p {
+    text-indent:3em;
+    text-align:justify;
+    margin-left:5%;
+    margin-right:5%;
+    }
+	
+.figure {
+	text-align:center;
+}
+/******************************/
+/* ex de numerot auto         */
+/*
+h1:before { content:counter(niveau01);
+                    conter-increment(niveau01);
+                    counter-reset(niveau02);
+          }
+h2:before { content:counter(niveau01) ". ";
+                    counter(niveau02);
+                    conter-increment(niveau02);
+          }
+*/
+
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    font-variant:small-caps;/**/
+    margin-bottom: 10%;
+    border-bottom:solid;
+    border-bottom-width:2pt;
+    border-bottom-color: rgb(240, 9, 9);
+    }
+
+/**************************************/
+/* la numérotation commence au niveau */
+/* Titre 2, titre 1 est le titre de   */
+/*               page                 */
+/**************************************/
+
+/********************************************/
+/*** Numérotation titre 2                   */
+/********************************************/
+h2:before { content:counter(niveau01) " ";
+            counter-increment:niveau01;
+            counter-reset:niveau02;
+            }
+            
+h2{
+    font-size: 1.25em;
+    font-style: italic;
+    margin-top: 3%;
+    }
+/******* FIN TITRE 2 *********/
+
+/********************************************/
+/*** Numérotation titre 3                   */
+/********************************************/
+h3:before { content:counter(niveau01) "." counter(niveau02) " ";
+            counter-increment:niveau02;           
+            counter-reset:niveau03;
+            }
+
+h3 {
+     font-style: italic;
+     font-size: 1em;
+     margin-left: 5%;
+     margin-top: 5%;
+     }
+/******* FIN TITRE 3 *********/
+
+
+/********************************************/
+/*** Numérotation titre 4                   */
+/********************************************/
+h4:before { content:counter(niveau01) "." counter(niveau02) "." counter(niveau03) " ";
+            counter-reset:niveau04;
+            counter-increment:niveau03;
+            }
+
+h4 {
+     font-style: italic;
+     margin-left:7%
+     }
+/******* FIN TITRE 4 *********/
+
+/********************************************/
+/*** Numérotation titre 5                   */
+/********************************************/
+h5:before { content:counter(niveau01) "." counter(niveau02) "." counter(niveau03) "." counter(niveau04) " ";
+            counter-increment:niveau04;
+            }
+
+h5{
+    margin-left:9%;
+    }
+/******* FIN TITRE 5 *********/
+
+
+/***************************************************/
+/*  Affiche le contenu des liens pour l'impression */
+/***************************************************/
+a:link:after, a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 90%;
+  }
+
+/*********   Astuce et attention    ************/
+.attention {
+	border:dashed 1px #FF0000;
+	padding:0.5em;
+	}
+
+.attention:before {
+	display:block;
+	font-weight:bold;
+	content: " Attention : ";
+}
+
+.astuce {
+	border:dashed 1px #008000;
+	padding:0.5em;
+	}
+
+.astuce:before {
+	display:block;
+	font-weight:bold;
+	content: " Astuce : ";
+}  
+/****************************************************/
+/*  les éléments que l'on ne veut pas imprimer      */
+/****************************************************/
+.noPrint {
+	display:none;
+}
