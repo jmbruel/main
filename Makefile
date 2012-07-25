@@ -23,9 +23,13 @@ commit:
 	git add .
 	git commit -m "maj by JMB"
 
-#push:
-#	@echo '==> Pushing to heroku'
-#	git push heroku
+github:
+	@echo '==> Create github repo'
+	git remote add origin https://github.com/jmbruel/main.git
+
+push:
+	@echo '==> Pushing to gitub'
+	git push -u origin master
 
 clean: 
 	@echo '==> Suppression des fichiers de compilation'
